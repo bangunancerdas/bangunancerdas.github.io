@@ -1,52 +1,119 @@
-# Bangunan Cerdas Website
+# Bangunan Cerdas — Company Profile Website
 
-Website profile statis untuk **Bangunan Cerdas** (Organization Site GitHub Pages):
-https://bangunancerdas.github.io
+Website company profile statis untuk **Bangunan Cerdas**, berfokus pada solusi **smart building** dan **smart home** dengan orientasi efisiensi energi.
 
-## Struktur Folder
+**Production URL:** https://bangunancerdas.github.io
 
-- `index.html` — halaman utama (home, tentang, manfaat, layanan, portfolio, blog, kontak)
-- `styles.css` — styling responsive + theme variables (light/dark)
-- `script.js` — dark/light toggle + localStorage + tahun footer
-- `assets/logo/` — logo untuk header dan favicon
-- `blog/` — artikel mini blog (`.html` untuk halaman publik, `.md` untuk draft/sumber konten)
-- `.github/workflows/deploy.yml` — CI/CD deploy ke GitHub Pages
-- `sitemap.xml` — sitemap URL website
+## Ringkasan
 
-## Cara Update Konten
+Project ini dibangun sebagai static site ringan berbasis HTML/CSS/JavaScript tanpa framework berat, dengan fokus:
 
-### 1) Update nomor WhatsApp
-Nomor saat ini: `+62 896-8085-8462` (link `wa.me` memakai format `6289680858462`).
+- performa loading cepat,
+- desain responsif (mobile-first),
+- dark/light theme toggle dengan persistensi preferensi pengguna,
+- deployment otomatis ke GitHub Pages via GitHub Actions.
 
-### 2) Update isi halaman utama
-Edit section terkait di `index.html`:
+## Fitur Utama
+
+- Landing page lengkap: Hero, Tentang, Manfaat, Layanan, Portfolio, Blog, Kontak
+- Dark/Light mode:
+  - auto-detect `prefers-color-scheme`,
+  - manual override via toggle,
+  - preferensi disimpan di `localStorage`,
+  - early theme script di `<head>` untuk mencegah flash tema yang salah
+- Mini blog dengan halaman artikel terpisah (`/blog/*.html`)
+- SEO baseline:
+  - meta description,
+  - Open Graph,
+  - structured data `schema.org` (`LocalBusiness`),
+  - `sitemap.xml`
+- GitHub Pages CI/CD modern:
+  - `actions/upload-pages-artifact`
+  - `actions/deploy-pages`
+
+## Teknologi
+
+- HTML5
+- CSS3 (custom properties / CSS variables)
+- Vanilla JavaScript
+- GitHub Actions (Pages deployment)
+
+## Struktur Repository
+
+```text
+.
+├── .github/workflows/deploy.yml
+├── assets/
+│   ├── images/
+│   └── logo/
+├── blog/
+│   ├── *.html
+│   └── *.md
+├── index.html
+├── script.js
+├── sitemap.xml
+└── styles.css
+```
+
+## Menjalankan Secara Lokal
+
+Gunakan static server sederhana:
+
+```bash
+cd /home/justsomeone/Git/bangunancerdas.github.io
+python3 -m http.server 8080
+```
+
+Akses di: `http://localhost:8080`
+
+## Deployment
+
+Setiap push ke branch `main` akan memicu workflow deploy ke GitHub Pages.
+
+Prasyarat di GitHub repository settings:
+
+1. **Settings → Pages**
+2. **Build and deployment → Source: GitHub Actions**
+
+Karena ini **Organization Site** (`bangunancerdas.github.io`), tidak memerlukan `CNAME` maupun base path khusus.
+
+## Panduan Maintenance Konten
+
+### 1. Update nomor WhatsApp
+
+Nomor aktif saat ini:
+
+- Display: `+62 896-8085-8462`
+- Link format: `https://wa.me/6289680858462`
+
+Jika mengubah nomor, pastikan format `wa.me` tetap tanpa tanda `+`, spasi, atau dash.
+
+### 2. Update konten halaman utama
+
+Edit langsung di `index.html` pada section terkait:
+
 - Hero
 - Tentang
 - Manfaat
 - Layanan
 - Portfolio
+- Blog list
 - Kontak
 
-### 3) Update artikel blog
-- Tambah/edit halaman artikel di folder `blog/` (format `.html`)
-- Tambahkan link artikel baru di section `#blog` pada `index.html`
-- Tambahkan URL artikel baru ke `sitemap.xml`
+### 3. Update/tambah artikel blog
 
-### 4) Ganti foto placeholder portfolio dengan foto asli
-Di section `#portfolio` pada `index.html`, ganti nilai `src` tiap `<img>` dengan file/foto asli.
+1. Tambah file artikel baru di `blog/` dengan format `.html`
+2. Tambahkan link artikel di section Blog pada `index.html`
+3. Tambahkan URL artikel baru ke `sitemap.xml`
 
-Rekomendasi:
-1. Simpan foto di `assets/images/portfolio/`
-2. Kompres dulu (WebP/JPEG) sebelum upload
-3. Pertahankan atribut `loading="lazy"`, `width`, `height`
-4. Update `alt` agar deskriptif sesuai proyek
+File `.md` di folder `blog/` dapat dipakai sebagai draft/internal source, namun halaman publik menggunakan `.html`.
 
-## Deploy GitHub Pages (Organization Site)
+### 4. Ganti foto placeholder portfolio
 
-Workflow deploy otomatis jalan setiap push ke `main` via GitHub Actions.
+Di `index.html` (section `#portfolio`):
 
-Pastikan di GitHub repo settings:
-- **Pages** → **Build and deployment**
-- Source: **GitHub Actions**
-
-Tidak perlu `CNAME` dan tidak perlu base path config karena ini organization site root.
+1. Ganti URL `src` image placeholder dengan aset asli
+2. Simpan file gambar di `assets/images/portfolio/` (disarankan)
+3. Kompres gambar (WebP/JPEG) sebelum dipakai
+4. Pertahankan atribut `loading="lazy"`, `width`, `height`
+5. Sesuaikan teks `alt` agar deskriptif dan relevan
