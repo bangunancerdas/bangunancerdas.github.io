@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Bangunan Cerdas Logo Dark">
+  <rect width="256" height="256" rx="40" fill="#e2e8f0"/>
+  <path d="M52 170V96l76-48 76 48v74" fill="none" stroke="#0f172a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M96 168v-34h64v34" fill="none" stroke="#0f172a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="182" cy="84" r="10" fill="#0f172a"/>
+</svg>
