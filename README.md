@@ -43,6 +43,7 @@ Project ini dibangun sebagai static site ringan berbasis HTML/CSS/JavaScript tan
 ```text
 .
 ├── .github/workflows/deploy.yml
+├── 404.html
 ├── assets/
 │   ├── images/
 │   └── logo/

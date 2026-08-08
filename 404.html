@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Halaman Tidak Ditemukan | Bangunan Cerdas</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Halaman yang Anda cari tidak ditemukan." />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-light.svg" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-dark.svg" media="(prefers-color-scheme: dark)" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.classList.add('theme-' + theme);
+      } catch (e) {
+        document.documentElement.classList.add('theme-light');
+      }
+      document.documentElement.classList.remove('no-js');
+    })();
+  </script>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Kembali ke Beranda">
+        <img class="logo logo-light" src="/assets/logo/logo-light.svg" alt="Logo Bangunan Cerdas" width="40" height="40" loading="eager" />
+        <img class="logo logo-dark" src="/assets/logo/logo-dark.svg" alt="Logo Bangunan Cerdas" width="40" height="40" loading="eager" />
+        <span>Bangunan Cerdas</span>
+      </a>
+      <button id="theme-toggle" class="btn btn-outline" type="button" aria-label="Ubah mode warna">🌙</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <section class="container">
+      <article class="card">
+        <p class="eyebrow">Error 404</p>
+        <h1>Halaman Tidak Ditemukan</h1>
+        <p>Maaf, halaman yang Anda cari tidak tersedia atau sudah dipindahkan.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/">Kembali ke Beranda</a>
+          <a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo,%20saya%20tertarik%20dengan%20jasa%20smart%20device%20Bangunan%20Cerdas" target="_blank" rel="noopener noreferrer">Hubungi WhatsApp</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
