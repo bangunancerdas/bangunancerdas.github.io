@@ -16,7 +16,7 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Logo dan nama Bangunan Cerdas: smart building dan smart home" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#17231f" />
   <link rel="canonical" href="https://bangunancerdas.github.io/" />
   <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-light.svg" media="(prefers-color-scheme: light)" />
   <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-dark.svg" media="(prefers-color-scheme: dark)" />
@@ -69,20 +69,57 @@
           <li><a href="#kontak">Kontak</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" class="btn btn-outline" type="button" aria-label="Ubah mode warna">🌙</button>
+      <button id="theme-toggle" class="btn btn-outline" type="button" aria-label="Ubah mode warna"></button>
     </div>
   </header>
 
   <main id="home">
-    <section class="hero section">
-      <div class="container">
-        <p class="eyebrow">Smart Building & Smart Home</p>
-        <h1>Smart, Green, Hemat Energi — Masa Depan Bangunan Dimulai Hari Ini</h1>
-        <p class="lead">Bangunan Cerdas membantu rumah dan bangunan komersial menerapkan otomasi pintar untuk efisiensi energi, kenyamanan, dan kontrol terpusat.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20ingin%20konsultasi%20tentang%20smart%20home%20atau%20smart%20building." target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-cta-id="hero">Hubungi via WhatsApp</a>
-          <a class="btn btn-outline" href="#layanan">Lihat Layanan</a>
+    <section class="hero" aria-labelledby="judul-utama">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Smart building &amp; smart home · Surabaya dan sekitarnya</p>
+          <h1 id="judul-utama">Otomasi dan monitoring energi untuk rumah dan gedung</h1>
+          <p class="lead">Bangunan Cerdas membantu rumah dan bangunan komersial menerapkan otomasi pintar untuk efisiensi energi, kenyamanan, dan kontrol terpusat.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20ingin%20konsultasi%20tentang%20smart%20home%20atau%20smart%20building." target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-cta-id="hero">Hubungi via WhatsApp</a>
+            <a class="link-arrow" href="#layanan">Lihat layanan</a>
+          </div>
         </div>
+        <figure class="drawing">
+          <svg viewBox="0 0 480 360" role="img" aria-labelledby="drawing-title drawing-desc">
+            <title id="drawing-title">Potongan bangunan dengan empat titik pemantauan dan kontrol</title>
+            <desc id="drawing-desc">Gambar garis sebuah gedung bertingkat dengan sayap rendah. Empat titik bernomor menandai sensor gerak, sensor suhu, meter energi, dan kontrol AC.</desc>
+            <!-- tanah -->
+            <path class="line" d="M20 300H460"/>
+            <path class="fine" d="M30 300l-10 10M60 300l-10 10M90 300l-10 10M120 300l-10 10M150 300l-10 10M180 300l-10 10M210 300l-10 10M240 300l-10 10M270 300l-10 10M300 300l-10 10M330 300l-10 10M360 300l-10 10M390 300l-10 10M420 300l-10 10M450 300l-10 10"/>
+            <!-- massa utama dan sayap -->
+            <path class="line" d="M60 300V70h200v70h140v160"/>
+            <path class="line" d="M52 70h216"/>
+            <path class="fine" d="M60 140h200M60 220h200M260 220h140"/>
+            <!-- jendela -->
+            <path class="fine" d="M84 96h36v28H84zM142 96h36v28h-36zM200 96h36v28h-36zM84 166h36v36H84zM142 166h36v36h-36zM200 166h36v36h-36zM84 246h36v54H84zM284 166h36v36h-36zM342 166h36v36h-36zM284 246h36v54h-36z"/>
+            <!-- unit atap -->
+            <path class="line" d="M180 70V50h50v20"/>
+            <!-- garis dimensi -->
+            <path class="fine" d="M436 140v160M430 140h12M430 300h12"/>
+            <!-- titik anotasi -->
+            <g>
+              <circle class="node" cx="102" cy="184" r="12"/><text class="node-n" x="102" y="184">1</text>
+              <circle class="node" cx="218" cy="110" r="12"/><text class="node-n" x="218" y="110">2</text>
+              <circle class="node" cx="302" cy="274" r="12"/><text class="node-n" x="302" y="274">3</text>
+              <circle class="node" cx="205" cy="40" r="12"/><text class="node-n" x="205" y="40">4</text>
+            </g>
+          </svg>
+          <figcaption>
+            <span class="label">Ilustrasi konsep · bukan proyek nyata</span>
+            <ol class="legend">
+              <li><b>1</b>Sensor gerak</li>
+              <li><b>2</b>Sensor suhu</li>
+              <li><b>3</b>Meter energi</li>
+              <li><b>4</b>Kontrol AC</li>
+            </ol>
+          </figcaption>
+        </figure>
       </div>
     </section>
 

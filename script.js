@@ -12,7 +12,6 @@
     root.classList.remove('theme-light', 'theme-dark');
     root.classList.add('theme-' + theme);
     if (btn) {
-      btn.textContent = theme === 'dark' ? '☀️' : '🌙';
       btn.setAttribute('aria-pressed', String(theme === 'dark'));
     }
   }
