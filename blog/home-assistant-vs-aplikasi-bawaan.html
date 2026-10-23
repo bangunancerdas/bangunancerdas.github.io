@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Assistant vs Aplikasi Bawaan: Kontrol Terpusat | Bangunan Cerdas</title>
-  <meta name="description" content="Perbandingan Home Assistant dan aplikasi bawaan perangkat: kontrol terpusat, otomasi custom, dan local-first untuk smart home yang lebih rapi." />
+  <title>Home Assistant vs Aplikasi Bawaan: Kapan Terpusat Layak | Bangunan Cerdas</title>
+  <meta name="description" content="Perbandingan Home Assistant dan aplikasi bawaan perangkat: cara kerja, lokal vs cloud, biaya perawatan, dan kapan kontrol terpusat layak dipilih." />
   <link rel="canonical" href="https://bangunancerdas.github.io/blog/home-assistant-vs-aplikasi-bawaan.html" />
-  <meta property="og:title" content="Home Assistant vs Aplikasi Bawaan: Kenapa Kontrol Terpusat Lebih Baik" />
-  <meta property="og:description" content="Kontrol terpusat, otomasi custom, dan local-first untuk smart home yang lebih rapi." />
+  <meta property="og:title" content="Home Assistant vs Aplikasi Bawaan: Kapan Kontrol Terpusat Layak Dipilih" />
+  <meta property="og:description" content="Kapan Home Assistant layak dipilih, dan kapan aplikasi bawaan sudah cukup." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://bangunancerdas.github.io/blog/home-assistant-vs-aplikasi-bawaan.html" />
   <meta property="og:site_name" content="Bangunan Cerdas" />
@@ -39,8 +39,8 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Home Assistant vs Aplikasi Bawaan: Kenapa Kontrol Terpusat Lebih Baik",
-    "description": "Perbandingan Home Assistant dan aplikasi bawaan perangkat: kontrol terpusat, otomasi custom, dan local-first untuk smart home yang lebih rapi.",
+    "headline": "Home Assistant vs Aplikasi Bawaan: Kapan Kontrol Terpusat Layak Dipilih",
+    "description": "Perbandingan Home Assistant dan aplikasi bawaan perangkat: cara kerja, lokal vs cloud, biaya perawatan, dan kapan kontrol terpusat layak dipilih.",
     "inLanguage": "id",
     "url": "https://bangunancerdas.github.io/blog/home-assistant-vs-aplikasi-bawaan.html",
     "mainEntityOfPage": {
@@ -74,9 +74,55 @@
     <article class="container article" data-track-article>
       <p class="label"><a href="/#blog">← Kembali ke daftar blog</a></p>
       <p class="kicker">Blog · Bangunan Cerdas</p>
-      <h1>Home Assistant vs Aplikasi Bawaan: Kenapa Kontrol Terpusat Lebih Baik</h1>
-      <p>Aplikasi bawaan tiap perangkat sering terpisah-pisah. Home Assistant menyatukan banyak device dalam satu dashboard sehingga kontrol, monitoring, dan otomasi jadi lebih rapi.</p>
-      <p>Keunggulan pentingnya adalah local-first: data lebih privat dan otomasi tetap berjalan meski koneksi internet terganggu.</p>
+      <h1>Home Assistant vs Aplikasi Bawaan: Kapan Kontrol Terpusat Layak Dipilih</h1>
+      <p class="summary">Perbandingan yang berimbang antara Home Assistant dan aplikasi bawaan masing-masing perangkat: apa yang dilakukan masing-masing, perbedaan lokal dan cloud, tanggung jawab perawatan, dan pertanyaan yang membantu memutuskan. Bangunan Cerdas menawarkan jasa setup Home Assistant, jadi baca dengan mempertimbangkan hal itu.</p>
+      <p class="disclosure">Pengungkapan: Bangunan Cerdas menawarkan jasa setup Home Assistant. Karena itu kami berusaha menyebut juga kapan aplikasi bawaan sudah cukup.</p>
+      <h2>Masalah pada aplikasi bawaan</h2>
+      <p>Setiap produsen biasanya menyediakan aplikasinya sendiri. Dengan satu atau dua perangkat dari satu merek, itu cukup. Masalah muncul ketika perangkat bertambah dan berasal dari beberapa merek: Anda berpindah-pindah aplikasi, jadwal dan aturan tidak dapat saling berhubungan, dan data konsumsi tersebar di banyak tempat.</p>
+      <h2>Apa yang dilakukan Home Assistant</h2>
+      <p>Home Assistant adalah perangkat lunak otomasi rumah yang menghubungkan banyak perangkat ke satu sistem. Aturan otomasinya terdiri dari pemicu, kondisi opsional, dan aksi.<sup><a class="cite" href="#ref-1" aria-label="Referensi 1">[1]</a></sup> Dasbor energinya dapat menampilkan listrik jaringan, panel surya, baterai, dan perangkat individual, dengan data dari monitor energi, colokan pintar, atau inverter surya apa pun yang terintegrasi dengan Home Assistant.<sup><a class="cite" href="#ref-2" aria-label="Referensi 2">[2]</a></sup></p>
+      <h2>Lokal atau cloud: bagian yang sering disalahpahami</h2>
+      <p>Home Assistant mengklasifikasikan integrasi menjadi lokal (<em>local push</em>, <em>local polling</em>) atau cloud (<em>cloud push</em>, <em>cloud polling</em>). Integrasi cloud memerlukan internet dan berhenti bekerja bila internet mati atau produsen berhenti mendukung perangkat; integrasi lokal berbicara langsung dengan perangkat, meski perangkatnya harus tetap menyala dan terhubung ke jaringan.<sup><a class="cite" href="#ref-3" aria-label="Referensi 3">[3]</a></sup></p>
+      <p>Artinya, <strong>Home Assistant tidak otomatis membuat perangkat cloud menjadi lokal</strong>. Otomasi yang mengandalkan integrasi cloud tetap terpengaruh gangguan internet. Klaim bahwa sistem "tetap berjalan tanpa internet" hanya benar untuk bagian yang memakai integrasi lokal. Periksa kelas integrasi setiap perangkat sebelum bergantung padanya; kelas tersebut umumnya dicantumkan pada halaman integrasi di dokumentasi Home Assistant.</p>
+      <h2>Privasi</h2>
+      <p>Dengan integrasi lokal, data perangkat berada di jaringan Anda. Dengan integrasi cloud, Anda menyerahkan sebagian kendali atas siapa yang dapat mengakses data tersebut.<sup><a class="cite" href="#ref-3" aria-label="Referensi 3">[3]</a></sup> Pilihan lokal tidak otomatis aman: akses jarak jauh, kata sandi, dan pembaruan tetap menjadi tanggung jawab Anda.</p>
+      <h2>Kapan aplikasi bawaan sudah cukup</h2>
+      <ul>
+        <li>Anda hanya memakai beberapa perangkat dari satu merek.</li>
+        <li>Kebutuhan otomasi sederhana (jadwal atau kontrol jarak jauh) dan tidak perlu lintas perangkat.</li>
+        <li>Tidak ada orang yang mau atau mampu merawat sistem tambahan.</li>
+        <li>Anda ingin dukungan dan garansi yang terpusat pada satu produsen.</li>
+      </ul>
+      <h2>Kapan Home Assistant layak dipertimbangkan</h2>
+      <ul>
+        <li>Perangkat berasal dari beberapa merek dan Anda ingin satu dasbor.</li>
+        <li>Anda membutuhkan aturan lintas perangkat, misalnya AC dan lampu bereaksi pada sensor kehadiran yang sama.</li>
+        <li>Monitoring energi terpusat penting bagi Anda.</li>
+        <li>Ada orang yang bertanggung jawab merawat sistem.</li>
+      </ul>
+      <h2>Biaya dan tanggung jawab yang menyertainya</h2>
+      <p>Home Assistant berjalan di perangkat yang harus menyala terus. Sistem ini perlu diperbarui, dicadangkan, dan dijaga keamanan aksesnya, terutama bila dibuka untuk akses jarak jauh. Jika pemasangnya tidak lagi tersedia, harus ada orang atau dokumentasi yang memungkinkan sistem dirawat. Biaya ini nyata dan harus dibandingkan dengan manfaat yang Anda butuhkan.</p>
+      <aside class="illustrative" aria-label="Contoh ilustratif">
+        <p class="label">Contoh ilustratif — bukan proyek nyata Bangunan Cerdas</p>
+        <p>Sebuah kantor kecil memakai AC merek A, lampu pintar merek B, dan meter energi merek C, masing-masing dengan aplikasi sendiri. Mereka ingin AC mati otomatis saat sensor kehadiran tidak mendeteksi orang dan ingin melihat konsumsi dalam satu tampilan. Pada kasus seperti ini kontrol terpusat masuk akal. Namun bila hanya memiliki dua lampu dari satu merek, aplikasi bawaan sudah cukup. Contoh ini hanya ilustrasi.</p>
+      </aside>
+      <h2>Pertanyaan untuk memutuskan</h2>
+      <ul>
+        <li>Berapa merek perangkat yang akan dipakai dalam dua tahun ke depan?</li>
+        <li>Apakah otomasi lintas perangkat benar-benar dibutuhkan?</li>
+        <li>Siapa yang akan memperbarui dan mencadangkan sistem?</li>
+        <li>Perangkat mana yang bergantung pada cloud, dan apa dampaknya bila cloud itu tidak tersedia?</li>
+        <li>Apakah pemilik data bersedia menyimpan datanya di server produsen?</li>
+      </ul>
+      <p>Untuk memilih perangkat, lihat juga <a href="/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html">panduan memilih smart device</a>.</p>
+      <section class="references" aria-labelledby="referensi">
+        <h2 id="referensi">Referensi</h2>
+        <ol>
+          <li id="ref-1">Home Assistant. <a href="https://www.home-assistant.io/docs/automation/basics/" target="_blank" rel="noopener noreferrer">Understanding automations</a>. Diakses 23 Oktober 2026.</li>
+          <li id="ref-2">Home Assistant. <a href="https://www.home-assistant.io/docs/energy/" target="_blank" rel="noopener noreferrer">Home energy management</a>. Diakses 23 Oktober 2026.</li>
+          <li id="ref-3">Home Assistant (2016). <a href="https://www.home-assistant.io/blog/2016/02/12/classifying-the-internet-of-things/" target="_blank" rel="noopener noreferrer">Classifying the Internet of Things</a>. Tulisan blog, tanggal dari URL. Diakses 23 Oktober 2026.</li>
+        </ol>
+      </section>
       <section class="article-more" aria-labelledby="baca-juga">
         <h2 id="baca-juga">Baca juga</h2>
         <ul class="spec-list">
@@ -87,7 +133,7 @@
       <section class="article-cta" aria-labelledby="diskusi">
         <h2 id="diskusi">Diskusikan kebutuhan Anda</h2>
         <p>Tertarik memakai Home Assistant? Kami menyediakan <a href="/#layanan">layanan setup Home Assistant</a> untuk rumah dan bangunan komersial.</p>
-        <p><a class="btn btn-primary" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20membaca%20artikel%20%22Home%20Assistant%20vs%20Aplikasi%20Bawaan%3A%20Kenapa%20Kontrol%20Terpusat%20Lebih%20Baik%22%20dan%20ingin%20berdiskusi%20tentang%20kebutuhan%20saya." target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-cta-id="article-footer">Diskusikan via WhatsApp</a></p>
+        <p><a class="btn btn-primary" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20membaca%20artikel%20%22Home%20Assistant%20vs%20Aplikasi%20Bawaan%3A%20Kapan%20Kontrol%20Terpusat%20Layak%20Dipilih%22%20dan%20ingin%20berdiskusi%20tentang%20kebutuhan%20saya." target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-cta-id="article-footer">Diskusikan via WhatsApp</a></p>
       </section>
     </article>
   </main>
