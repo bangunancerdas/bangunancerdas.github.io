@@ -151,6 +151,22 @@ Edit langsung di `index.html` pada section terkait:
 
 Setiap artikel memerlukan: `<link rel="canonical">`, Open Graph lengkap, JSON-LD `BlogPosting` (tanpa tanggal/penulis yang tidak terverifikasi), bagian "Baca juga" (minimal dua artikel lain), tautan ke `/#layanan`, dan CTA WhatsApp dengan judul artikel pada pesannya. Tes akan gagal jika ada yang kurang. Judul pada `.md` harus sama dengan `<h1>` di `.html`.
 
+Standar editorial artikel (dijaga oleh `tests/test_blog_content.py`):
+
+- Setiap artikel punya ringkasan (`p.summary`), minimal empat `<h2>`, dan isi minimal 500 kata. Jangan menambah kata hanya untuk memenuhi angka.
+- Setiap klaim teknis, regulasi, atau angka diberi sitasi bernomor `<sup><a class="cite" href="#ref-N" aria-label="Referensi N">[N]</a></sup>` dan dicantumkan pada daftar `<section class="references">` (`<h2 id="referensi">Referensi</h2>` + `<ol>` dengan `<li id="ref-N">`). Minimal tiga referensi, tiap referensi tepat satu tautan `https` dengan teks deskriptif, `target="_blank" rel="noopener noreferrer"`, dan tanggal akses. Semua referensi harus dikutip dan semua sitasi harus menuju referensi yang ada.
+- Klaim persentase atau "persen" wajib bersitasi. Jangan memakai angka penghematan tanpa sumber.
+- Contoh hipotetis memakai `<aside class="illustrative">` dengan label "Contoh ilustratif — bukan proyek nyata Bangunan Cerdas". Jangan menulis testimoni, klien, atau hasil proyek.
+- Sebelum mengutip regulasi, buka teks aslinya dan catat tanggal penetapannya. Untuk keperluan formal, status berlaku perlu dicek di JDIH.
+
+Untuk memeriksa bahwa tautan referensi masih hidup (butuh internet; tidak dijalankan di CI):
+
+```bash
+python3 scripts/check-external-links.py
+```
+
+Skrip ini hanya menandai tautan yang benar-benar rusak (404/410). Respons 403/429, galat server, dan timeout dilaporkan sebagai `UNVERIFIED`, bukan kegagalan.
+
 File `.md` di folder `blog/` dapat dipakai sebagai draft/internal source, namun halaman publik menggunakan `.html`.
 
 ## Analytics (opsional, nonaktif)
