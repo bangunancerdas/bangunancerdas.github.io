@@ -4,23 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panduan Memilih Smart Device untuk Rumah/Kantor | Bangunan Cerdas</title>
-  <meta name="description" content="Panduan singkat memilih smart device yang sesuai kebutuhan rumah atau kantor." />
+  <meta name="description" content="Panduan memilih smart device untuk rumah atau kantor: tentukan kebutuhan, pilih ekosistem terbuka, dan pastikan ada local control." />
+  <link rel="canonical" href="https://bangunancerdas.github.io/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html" />
   <meta property="og:title" content="Panduan Memilih Smart Device untuk Rumah/Kantor" />
   <meta property="og:description" content="Tips memilih smart device dengan integrasi, kompatibilitas, dan local control." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://bangunancerdas.github.io/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html" />
-  <link rel="stylesheet" href="/styles.css" />
+  <meta property="og:site_name" content="Bangunan Cerdas" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:image" content="https://bangunancerdas.github.io/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Logo dan nama Bangunan Cerdas: smart building dan smart home" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-light.svg" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-dark.svg" media="(prefers-color-scheme: dark)" />
   <script>
     (function () {
-      try {
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.classList.add('theme-' + (stored || (prefersDark ? 'dark' : 'light')));
-      } catch (e) {
-        document.documentElement.classList.add('theme-light');
+      var theme = 'light';
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      if (stored === 'light' || stored === 'dark') {
+        theme = stored;
+      } else {
+        try { if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark'; } catch (e) {}
       }
+      document.documentElement.classList.add('theme-' + theme);
       document.documentElement.classList.remove('no-js');
     })();
+  </script>
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Panduan Memilih Smart Device untuk Rumah/Kantor",
+    "description": "Panduan memilih smart device untuk rumah atau kantor: tentukan kebutuhan, pilih ekosistem terbuka, dan pastikan ada local control.",
+    "inLanguage": "id",
+    "url": "https://bangunancerdas.github.io/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://bangunancerdas.github.io/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bangunan Cerdas",
+      "url": "https://bangunancerdas.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bangunancerdas.github.io/assets/logo/logo-light.svg"
+      }
+    }
+  }
   </script>
 </head>
 <body>
@@ -35,13 +71,26 @@
     </div>
   </header>
   <main class="section">
-    <article class="container card">
+    <article class="container card" data-track-article>
       <p><a href="/#blog">← Kembali ke daftar blog</a></p>
       <h1>Panduan Memilih Smart Device untuk Rumah/Kantor</h1>
       <p>Mulai dari kebutuhan utama: pencahayaan, kontrol AC, keamanan, atau monitoring energi. Pilih perangkat yang kompatibel dengan ekosistem terbuka agar mudah diintegrasikan.</p>
       <p>Pastikan juga ada opsi local control supaya sistem tetap berjalan saat internet tidak stabil.</p>
+      <section aria-labelledby="baca-juga">
+        <h2 id="baca-juga">Baca juga</h2>
+        <ul>
+          <li><a href="/blog/home-assistant-vs-aplikasi-bawaan.html">Home Assistant vs Aplikasi Bawaan: Kenapa Kontrol Terpusat Lebih Baik</a></li>
+          <li><a href="/blog/5-cara-smart-device-menghemat-tagihan-listrik.html">5 Cara Smart Device Menghemat Tagihan Listrik</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="diskusi">
+        <h2 id="diskusi">Diskusikan kebutuhan Anda</h2>
+        <p>Bingung memilih perangkat yang tepat? Lihat <a href="/#layanan">layanan pemasangan smart device</a> kami atau konsultasikan kebutuhan Anda.</p>
+        <p><a class="btn btn-primary" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20membaca%20artikel%20%22Panduan%20Memilih%20Smart%20Device%20untuk%20Rumah%2FKantor%22%20dan%20ingin%20berdiskusi%20tentang%20kebutuhan%20saya." target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-cta-id="article-footer">Diskusikan via WhatsApp</a></p>
+      </section>
     </article>
   </main>
   <script src="/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
 </body>
 </html>

@@ -8,22 +8,29 @@
   <meta property="og:title" content="Bangunan Cerdas | Smart Building & Smart Home" />
   <meta property="og:description" content="Solusi smart building & smart home fokus efisiensi energi, otomasi, dan sustainability." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bangunan Cerdas" />
+  <meta property="og:locale" content="id_ID" />
   <meta property="og:url" content="https://bangunancerdas.github.io/" />
-  <meta property="og:image" content="https://bangunancerdas.github.io/assets/logo/logo-light.svg" />
+  <meta property="og:image" content="https://bangunancerdas.github.io/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Logo dan nama Bangunan Cerdas: smart building dan smart home" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://bangunancerdas.github.io/" />
   <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-light.svg" media="(prefers-color-scheme: light)" />
   <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-dark.svg" media="(prefers-color-scheme: dark)" />
   <script>
     (function () {
-      try {
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (prefersDark ? 'dark' : 'light');
-        document.documentElement.classList.add('theme-' + theme);
-      } catch (e) {
-        document.documentElement.classList.add('theme-light');
+      var theme = 'light';
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      if (stored === 'light' || stored === 'dark') {
+        theme = stored;
+      } else {
+        try { if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark'; } catch (e) {}
       }
+      document.documentElement.classList.add('theme-' + theme);
       document.documentElement.classList.remove('no-js');
     })();
   </script>
@@ -34,7 +41,9 @@
     "@type": "LocalBusiness",
     "name": "Bangunan Cerdas",
     "url": "https://bangunancerdas.github.io/",
-    "image": "https://bangunancerdas.github.io/assets/logo/logo-light.svg",
+    "image": "https://bangunancerdas.github.io/assets/og-image.png",
+    "logo": "https://bangunancerdas.github.io/assets/logo/logo-light.svg",
+    "telephone": "+6289680858462",
     "description": "Jasa smart building dan smart home fokus efisiensi energi dan otomasi.",
     "areaServed": "Surabaya dan sekitarnya",
     "serviceType": ["Home Automation Installation", "Smart Building Consultation", "Home Assistant Setup"],
@@ -71,7 +80,7 @@
         <h1>Smart, Green, Hemat Energi — Masa Depan Bangunan Dimulai Hari Ini</h1>
         <p class="lead">Bangunan Cerdas membantu rumah dan bangunan komersial menerapkan otomasi pintar untuk efisiensi energi, kenyamanan, dan kontrol terpusat.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://wa.me/6289680858462?text=Halo,%20saya%20tertarik%20dengan%20jasa%20smart%20device%20Bangunan%20Cerdas" target="_blank" rel="noopener noreferrer">Hubungi via WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20ingin%20konsultasi%20tentang%20smart%20home%20atau%20smart%20building." target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-cta-id="hero">Hubungi via WhatsApp</a>
           <a class="btn btn-outline" href="#layanan">Lihat Layanan</a>
         </div>
       </div>
@@ -92,7 +101,7 @@
           <article class="card"><h3>Hemat Energi</h3><p>Monitoring otomatis dan kontrol cerdas untuk menekan pemborosan listrik harian.</p></article>
           <article class="card"><h3>Ramah Lingkungan</h3><p>Mendukung green building dan membantu menurunkan jejak karbon properti.</p></article>
           <article class="card"><h3>Kenyamanan & Otomasi</h3><p>Atur pencahayaan, suhu, dan perangkat secara otomatis sesuai skenario aktivitas.</p></article>
-          <article class="card"><h3>Value Jangka Panjang</h3><p>Meningkatkan ROI operasional serta nilai jual dan daya saing properti.</p></article>
+          <article class="card"><h3>Value Jangka Panjang</h3><p>Membantu menekan biaya operasional jangka panjang dan menambah daya saing properti.</p></article>
         </div>
       </div>
     </section>
@@ -110,16 +119,18 @@
               <li>Sensor otomatis (gerak, pintu, suhu, kelembapan)</li>
               <li>Monitoring energi real-time</li>
             </ul>
+            <p><a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20pemasangan%20smart%20device." target="_blank" rel="noopener noreferrer" aria-label="Tanya pemasangan smart device via WhatsApp" data-track="service_cta_click" data-cta-id="service-smart-device">Tanya pemasangan smart device via WhatsApp</a></p>
           </article>
           <article class="card">
             <h3>Setup Home Assistant</h3>
             <p>Instalasi dan konfigurasi Home Assistant untuk kontrol terpusat semua smart device via PC (dashboard lokal) dan HP (mobile app/remote access).</p>
             <ul>
               <li>Integrasi lighting, AC, sensor, kamera, dan perangkat lain dalam satu dashboard</li>
-              <li>Automasi custom: lampu nyala saat maghrib, AC mati saat ruangan kosong, dan skenario lain</li>
+              <li>Otomasi custom: lampu nyala saat maghrib, AC mati saat ruangan kosong, dan skenario lain</li>
               <li>Monitoring konsumsi energi secara real-time</li>
               <li><strong>Local control:</strong> data tidak wajib ke cloud pihak ketiga, lebih privat, tetap berjalan walau internet mati</li>
             </ul>
+            <p><a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20setup%20Home%20Assistant." target="_blank" rel="noopener noreferrer" aria-label="Tanya setup Home Assistant via WhatsApp" data-track="service_cta_click" data-cta-id="service-home-assistant">Tanya setup Home Assistant via WhatsApp</a></p>
           </article>
         </div>
       </div>
@@ -128,31 +139,35 @@
     <section id="portfolio" class="section alt">
       <div class="container">
         <h2>Portfolio</h2>
+        <p class="lead-small">Dokumentasi proyek klien belum dipublikasikan di halaman ini. Berikut skenario solusi yang dapat dirancang sesuai kebutuhan Anda. Ini adalah ilustrasi konsep, bukan proyek yang sudah selesai dikerjakan.</p>
         <div class="grid portfolio-grid">
-          <!-- TODO: Ganti seluruh gambar placeholder Unsplash di section portfolio ini dengan foto project asli Bangunan Cerdas -->
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=70" alt="Smart home dashboard" loading="lazy" width="600" height="400" />
-            <h3>Smart Home Residence A</h3>
-            <p>Integrasi lighting dan sensor otomatis untuk rumah tinggal.</p>
-            <p class="result">Hasil: estimasi penghematan energi 18%.</p>
+          <article class="portfolio-item" data-kind="concept">
+            <div class="portfolio-visual" aria-hidden="true">🏠</div>
+            <p class="badge">Skenario konsep</p>
+            <h3>Rumah tinggal</h3>
+            <p>Lampu dan sensor otomatis untuk rumah tinggal.</p>
+            <p><a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20tertarik%20dengan%20skenario%20solusi%20rumah%20tinggal%3A%20lampu%20dan%20sensor%20otomatis." target="_blank" rel="noopener noreferrer" aria-label="Diskusikan skenario ini via WhatsApp: rumah tinggal" data-track="portfolio_click" data-cta-id="portfolio-rumah-tinggal">Diskusikan skenario ini via WhatsApp</a></p>
           </article>
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=900&q=70" alt="Home automation panel" loading="lazy" width="600" height="400" />
-            <h3>Automation Panel Kantor B</h3>
+          <article class="portfolio-item" data-kind="concept">
+            <div class="portfolio-visual" aria-hidden="true">🏢</div>
+            <p class="badge">Skenario konsep</p>
+            <h3>Kantor</h3>
             <p>Kontrol terpusat AC dan pencahayaan untuk area kerja.</p>
-            <p class="result">Hasil: kenyamanan meningkat & operasional lebih stabil.</p>
+            <p><a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20tertarik%20dengan%20skenario%20solusi%20kantor%3A%20kontrol%20AC%20dan%20pencahayaan%20terpusat." target="_blank" rel="noopener noreferrer" aria-label="Diskusikan skenario ini via WhatsApp: kantor" data-track="portfolio_click" data-cta-id="portfolio-kantor">Diskusikan skenario ini via WhatsApp</a></p>
           </article>
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=70" alt="Solar panel roof" loading="lazy" width="600" height="400" />
-            <h3>Energi Monitoring Gedung C</h3>
-            <p>Dashboard konsumsi energi terintegrasi dengan sistem bangunan.</p>
-            <p class="result">Hasil: deteksi beban puncak lebih cepat untuk optimasi biaya.</p>
+          <article class="portfolio-item" data-kind="concept">
+            <div class="portfolio-visual" aria-hidden="true">📊</div>
+            <p class="badge">Skenario konsep</p>
+            <h3>Monitoring energi</h3>
+            <p>Dashboard konsumsi energi yang menampilkan pemakaian listrik secara real-time.</p>
+            <p><a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20tertarik%20dengan%20skenario%20solusi%20monitoring%20energi." target="_blank" rel="noopener noreferrer" aria-label="Diskusikan skenario ini via WhatsApp: monitoring energi" data-track="portfolio_click" data-cta-id="portfolio-monitoring-energi">Diskusikan skenario ini via WhatsApp</a></p>
           </article>
-          <article class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=70" alt="Modern energy efficient building" loading="lazy" width="600" height="400" />
-            <h3>Smart Building Retrofit D</h3>
-            <p>Modernisasi sistem kontrol pada gedung existing.</p>
-            <p class="result">Hasil: efisiensi sistem HVAC dan pencahayaan meningkat.</p>
+          <article class="portfolio-item" data-kind="concept">
+            <div class="portfolio-visual" aria-hidden="true">🔧</div>
+            <p class="badge">Skenario konsep</p>
+            <h3>Retrofit gedung existing</h3>
+            <p>Modernisasi sistem kontrol pada gedung yang sudah berdiri.</p>
+            <p><a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20tertarik%20dengan%20skenario%20solusi%20retrofit%20sistem%20kontrol%20gedung%20existing." target="_blank" rel="noopener noreferrer" aria-label="Diskusikan skenario ini via WhatsApp: retrofit gedung" data-track="portfolio_click" data-cta-id="portfolio-retrofit">Diskusikan skenario ini via WhatsApp</a></p>
           </article>
         </div>
       </div>
@@ -163,11 +178,11 @@
         <h2>Blog</h2>
         <p class="lead-small">Wawasan singkat seputar smart building, efisiensi energi, dan otomasi.</p>
         <div class="grid cards">
-          <article class="card"><h3><a href="/blog/apa-itu-smart-building-dan-kenapa-penting-di-2026.html">Apa itu Smart Building dan Kenapa Penting di 2026</a></h3></article>
-          <article class="card"><h3><a href="/blog/5-cara-smart-device-menghemat-tagihan-listrik.html">5 Cara Smart Device Menghemat Tagihan Listrik</a></h3></article>
-          <article class="card"><h3><a href="/blog/tren-green-building-di-indonesia.html">Tren Green Building di Indonesia</a></h3></article>
-          <article class="card"><h3><a href="/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html">Panduan Memilih Smart Device untuk Rumah/Kantor</a></h3></article>
-          <article class="card"><h3><a href="/blog/home-assistant-vs-aplikasi-bawaan.html">Home Assistant vs Aplikasi Bawaan: Kenapa Kontrol Terpusat Lebih Baik</a></h3></article>
+          <article class="card"><h3><a href="/blog/apa-itu-smart-building-dan-kenapa-penting-di-2026.html">Apa itu Smart Building dan Kenapa Penting di 2026</a></h3><p>Konsep dasar smart building untuk efisiensi energi dan masa depan properti.</p></article>
+          <article class="card"><h3><a href="/blog/5-cara-smart-device-menghemat-tagihan-listrik.html">5 Cara Smart Device Menghemat Tagihan Listrik</a></h3><p>Tips praktis otomasi dan monitoring untuk efisiensi konsumsi energi.</p></article>
+          <article class="card"><h3><a href="/blog/tren-green-building-di-indonesia.html">Tren Green Building di Indonesia</a></h3><p>Perkembangan green building dan integrasi smart system untuk sustainability.</p></article>
+          <article class="card"><h3><a href="/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html">Panduan Memilih Smart Device untuk Rumah/Kantor</a></h3><p>Tips memilih smart device dengan integrasi, kompatibilitas, dan local control.</p></article>
+          <article class="card"><h3><a href="/blog/home-assistant-vs-aplikasi-bawaan.html">Home Assistant vs Aplikasi Bawaan: Kenapa Kontrol Terpusat Lebih Baik</a></h3><p>Kontrol terpusat, otomasi custom, dan local-first untuk smart home yang lebih rapi.</p></article>
         </div>
       </div>
     </section>
@@ -176,7 +191,7 @@
       <div class="container">
         <h2>Kontak</h2>
         <p>Area layanan: Surabaya & sekitarnya.</p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/6289680858462?text=Halo,%20saya%20tertarik%20dengan%20jasa%20smart%20device%20Bangunan%20Cerdas" target="_blank" rel="noopener noreferrer">Chat sekarang</a> (+62 896-8085-8462)</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20ingin%20berdiskusi%20tentang%20kebutuhan%20smart%20home%20atau%20smart%20building%20saya." target="_blank" rel="noopener noreferrer" aria-label="Chat sekarang via WhatsApp" data-track="whatsapp_click" data-cta-id="contact">Chat sekarang via WhatsApp</a> (+62 896-8085-8462)</p>
       </div>
     </section>
   </main>
@@ -188,5 +203,6 @@
   </footer>
 
   <script src="/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
 </body>
 </html>

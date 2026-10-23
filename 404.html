@@ -10,14 +10,15 @@
   <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-dark.svg" media="(prefers-color-scheme: dark)" />
   <script>
     (function () {
-      try {
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (prefersDark ? 'dark' : 'light');
-        document.documentElement.classList.add('theme-' + theme);
-      } catch (e) {
-        document.documentElement.classList.add('theme-light');
+      var theme = 'light';
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      if (stored === 'light' || stored === 'dark') {
+        theme = stored;
+      } else {
+        try { if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark'; } catch (e) {}
       }
+      document.documentElement.classList.add('theme-' + theme);
       document.documentElement.classList.remove('no-js');
     })();
   </script>
@@ -36,19 +37,20 @@
   </header>
 
   <main class="section">
-    <section class="container">
-      <article class="card">
+    <div class="container">
+      <div class="card">
         <p class="eyebrow">Error 404</p>
         <h1>Halaman Tidak Ditemukan</h1>
         <p>Maaf, halaman yang Anda cari tidak tersedia atau sudah dipindahkan.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/">Kembali ke Beranda</a>
-          <a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo,%20saya%20tertarik%20dengan%20jasa%20smart%20device%20Bangunan%20Cerdas" target="_blank" rel="noopener noreferrer">Hubungi WhatsApp</a>
+          <a class="btn btn-outline" href="https://wa.me/6289680858462?text=Halo%20Bangunan%20Cerdas%2C%20saya%20mengalami%20kendala%20saat%20membuka%20halaman%20di%20website%20dan%20ingin%20bertanya." target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-cta-id="not-found">Hubungi via WhatsApp</a>
         </div>
-      </article>
-    </section>
+      </div>
+    </div>
   </main>
 
   <script src="/script.js" defer></script>
+  <script src="/analytics.js" defer></script>
 </body>
 </html>
