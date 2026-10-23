@@ -146,20 +146,53 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .portfolio-item .label { margin-bottom: var(--space-1); }
 .row-side { display: grid; justify-items: start; }
 
-/* ---------- bagian lama (didesain ulang pada tahap berikutnya) ---------- */
-.section.alt { background: var(--surface); }
-.site-footer { border-top: 1px solid var(--rule-strong); padding: 1.25rem 0; color: var(--muted); }
-.grid { display: grid; gap: 1rem; }
-.cards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.card { background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1rem; overflow-wrap: anywhere; }
-.lead-small { color: var(--muted); }
+/* ---------- blog (beranda) ---------- */
+.post-list { list-style: none; margin: var(--space-4) 0 0; padding: 0; border-top: 1px solid var(--rule-strong); }
+.post { padding: var(--space-3) 0; border-bottom: 1px solid var(--rule); }
+.post h3 { margin-bottom: var(--space-1); }
+.post h3 a { text-decoration: none; }
+.post h3 a:hover { text-decoration: underline; }
+.post p { margin: 0; color: var(--muted); max-width: 60ch; }
+.post:first-child { padding: var(--space-4) 0; }
+.post:first-child h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+/* ---------- kontak ---------- */
+.contact { background: var(--surface); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: var(--space-3); margin: var(--space-4) 0 0; padding-top: var(--space-3); border-top: 1px solid var(--rule-strong); }
+.facts dt { margin-bottom: var(--space-1); }
+.facts dd { margin: 0; }
+.mono-num { font-family: var(--font-mono); font-size: 1.15rem; }
+
+/* ---------- artikel & 404 ---------- */
+.article { max-width: 44rem; }
+.article h1 { margin-bottom: var(--space-4); }
+.article p, .article li { font-size: 1.1rem; }
+.article ol { padding-left: 1.4rem; }
+.article ol li { padding: .35rem 0 .35rem .25rem; }
+.article ol li::marker { font-family: var(--font-mono); color: var(--accent); }
+.article-more, .article-cta { margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--rule-strong); }
+.article-more h2, .article-cta h2 { font-size: 1.3rem; margin-bottom: var(--space-2); }
+.article-more .spec-list li { font-size: 1rem; }
+.article-more a { text-decoration: none; font-weight: 600; }
+.article-more a:hover { text-decoration: underline; }
+.notfound { max-width: 40rem; padding: var(--space-5) 0; }
+.notfound h1 { margin-bottom: var(--space-3); }
+
+/* ---------- footer ---------- */
+.site-footer { border-top: 1px solid var(--rule-strong); padding: var(--space-5) 0; }
+.footer-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-4); align-items: start; }
+.footer-brand { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; margin: 0 0 var(--space-1); }
+.muted { color: var(--muted); margin: 0; }
+.site-footer nav ul { flex-direction: column; gap: 0; }
+.site-footer nav a { justify-content: flex-start; }
+.copy { font-family: var(--font-mono); font-size: .8rem; text-align: right; }
 
 @media (max-width: 820px) {
   html { scroll-padding-top: 1rem; }
   .site-header { position: static; }
   .nav-wrap { flex-wrap: wrap; }
-  nav { order: 3; width: 100%; }
-  nav ul { overflow-x: auto; gap: var(--space-2); padding-bottom: .25rem; scrollbar-width: thin; }
+  .site-header nav { order: 3; width: 100%; }
+  .site-header nav ul { overflow-x: auto; gap: var(--space-2); padding-bottom: .25rem; scrollbar-width: thin; }
   nav a { white-space: nowrap; padding: 0 .5rem; }
   .hero { padding: var(--space-5) 0; }
   .hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
@@ -171,6 +204,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service, .service + .service { padding: var(--space-4) 0; border-left: 0; }
   .service + .service { border-top: 1px solid var(--rule); }
   .portfolio-item { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
+  .footer-grid { grid-template-columns: minmax(0, 1fr); }
+  .copy { text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
