@@ -173,7 +173,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .article-more, .article-cta { margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--rule-strong); }
 .article-more h2, .article-cta h2 { font-size: 1.3rem; margin-bottom: var(--space-2); }
 .article-more .spec-list li { font-size: 1rem; }
-.article-more a { display: inline-block; padding: .35rem 0; text-decoration: none; font-weight: 600; }
+.article-more a { display: inline-block; padding: .6rem 0; text-decoration: none; font-weight: 600; }
 .article-more a:hover { text-decoration: underline; }
 .notfound { max-width: 40rem; padding: var(--space-5) 0; }
 .notfound h1 { margin-bottom: var(--space-3); }
