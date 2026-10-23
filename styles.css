@@ -94,7 +94,7 @@ nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offs
 .btn-primary:hover { background: transparent; color: var(--action); }
 .btn-outline { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
 .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-.link-arrow { display: inline-block; padding: .65rem 0 .2rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+.link-arrow { display: inline-block; padding: .8rem 0 .35rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
 .link-arrow::after { content: "→"; margin-left: .5rem; }
 .link-arrow:hover { color: var(--accent); }
 .cta-row { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: center; margin-top: var(--space-4); }
@@ -150,7 +150,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .post-list { list-style: none; margin: var(--space-4) 0 0; padding: 0; border-top: 1px solid var(--rule-strong); }
 .post { padding: var(--space-3) 0; border-bottom: 1px solid var(--rule); }
 .post h3 { margin-bottom: var(--space-1); }
-.post h3 a { text-decoration: none; }
+.post h3 a { display: inline-block; padding: .7rem 0; text-decoration: none; }
 .post h3 a:hover { text-decoration: underline; }
 .post p { margin: 0; color: var(--muted); max-width: 60ch; }
 .post:first-child { padding: var(--space-4) 0; }
@@ -173,7 +173,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .article-more, .article-cta { margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--rule-strong); }
 .article-more h2, .article-cta h2 { font-size: 1.3rem; margin-bottom: var(--space-2); }
 .article-more .spec-list li { font-size: 1rem; }
-.article-more a { text-decoration: none; font-weight: 600; }
+.article-more a { display: inline-block; padding: .35rem 0; text-decoration: none; font-weight: 600; }
 .article-more a:hover { text-decoration: underline; }
 .notfound { max-width: 40rem; padding: var(--space-5) 0; }
 .notfound h1 { margin-bottom: var(--space-3); }
