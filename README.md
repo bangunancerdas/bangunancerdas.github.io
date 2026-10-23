@@ -102,7 +102,9 @@ Yang **tidak** dicakup tes otomatis ini: tampilan visual dan responsif (lihat da
 
 ## Deployment
 
-Setiap push ke branch `main` menjalankan job `quality`; job `deploy` ke GitHub Pages hanya berjalan jika job tersebut lulus. Pull request hanya menjalankan `quality`. Folder `tests/`, `scripts/`, `.github/` dan `README.md` tidak ikut dipublikasikan.
+Setiap push ke branch `main` menjalankan job `quality`; job `deploy` ke GitHub Pages hanya berjalan jika job tersebut lulus. Pull request hanya menjalankan `quality`. Folder `tests/`, `scripts/`, `.github/` dan `README.md` dikecualikan dari artefak Pages oleh job `deploy`.
+
+> **Penting:** gerbang `quality` → `deploy` dan pengecualian di atas hanya berlaku jika **Settings → Pages → Build and deployment → Source** diatur ke **GitHub Actions**. Jika sumbernya masih "Deploy from a branch" (mode `legacy`), setiap push ke `main` tetap terbit langsung tanpa melewati `quality`, dan seluruh isi repository ikut dipublikasikan.
 
 Prasyarat di GitHub repository settings:
 
