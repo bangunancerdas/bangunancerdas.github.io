@@ -74,6 +74,16 @@ python3 -m http.server 8080
 
 Akses di: `http://localhost:8080`
 
+## Identitas Visual
+
+Konsep: "gambar teknik", yaitu lembar spesifikasi arsitek-insinyur. Semua nilai ada di token `:root` pada `styles.css`.
+
+- **Warna:** kertas gading, tinta hijau-hitam, satu aksen tembaga (penanda energi). Mode gelap memakai token yang sama. Semua pasangan teks/latar sudah dicek ≥ 4,5:1.
+- **Tipografi:** tanpa font eksternal. Heading serif sistem, isi sans sistem, label teknis monospace.
+- **Bentuk:** garis hairline sebagai pemisah, sudut hampir tajam (2px), tanpa bayangan. Kartu hanya dipakai jika benar-benar mengelompokkan isi.
+- **Ilustrasi:** gambar hero adalah SVG garis berlabel "Ilustrasi konsep · bukan proyek nyata". Jangan menambahkan foto, klien, atau angka hasil yang tidak nyata.
+- **Pola section:** label bernomor + judul di kiri, isi di kanan (satu kolom di mobile). Target sentuh ≥ 44px.
+
 ## Quality Checks
 
 Jalankan semua pemeriksaan yang sama dengan CI:
