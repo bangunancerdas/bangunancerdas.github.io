@@ -95,7 +95,7 @@ Jalankan semua pemeriksaan yang sama dengan CI:
 Skrip ini menjalankan:
 
 1. `python3 -m unittest discover -s tests -t . -v`: tautan internal & fragment, aset lokal, placeholder portfolio, metadata SEO, canonical, JSON-LD, sitemap, URL WhatsApp, struktur HTML.
-2. `node --test tests/js`: inisialisasi & persistensi tema, perilaku analytics.
+2. `node --test "tests/js/*.test.mjs"`: inisialisasi & persistensi tema, perilaku analytics.
 3. `./scripts/validate-html.sh`: validasi HTML dengan Nu HTML Checker (butuh Java dan npm; jar `vnu-jar` diunduh sekali ke direktori cache sementara).
 
 Yang **tidak** dicakup tes otomatis ini: tampilan visual dan responsif (lihat daftar viewport di bawah), pengukuran Core Web Vitals, serta pengiriman data analytics ke provider. Pemeriksaan tersebut dilakukan manual (mis. Lighthouse atau DevTools). Viewport yang disarankan: 320×568, 375×812, 390×844, 768×1024, 1024×768, 1440×900.

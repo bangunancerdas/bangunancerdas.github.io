@@ -7,7 +7,7 @@ echo "==> Python checks (links, assets, SEO, sitemap, WhatsApp, structure)"
 python3 -m unittest discover -s tests -t . -v
 
 echo "==> JavaScript tests (theme, analytics)"
-node --test tests/js
+node --test "tests/js/*.test.mjs"
 
 echo "==> HTML validation (Nu HTML Checker)"
 ./scripts/validate-html.sh
