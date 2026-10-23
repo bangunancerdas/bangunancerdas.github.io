@@ -32,7 +32,7 @@ Praktik dasarnya bahkan sudah diatur untuk gedung pemerintah. Peraturan Menteri 
 
 **Teknologi tidak menjamin penghematan.** Laporan PNNL tentang sensor kehadiran pada lampu LED di area parkir menemukan hasil yang sangat bervariasi, dari tambahan penghematan 76 persen hingga hampir nol, dan penulisnya menekankan perlunya kehati-hatian dalam desain, pemilihan, dan *commissioning*.[7] Konteksnya adalah area parkir yang diteliti lembaga riset Amerika Serikat, jadi angkanya tidak dapat dipindahkan begitu saja ke bangunan Anda. Pelajarannya yang berlaku umum: hasil bergantung pada pemasangan dan penyetelan.
 
-**Penempatan sensor menentukan.** Panduan FEMP menyebut sensor kehadiran harus dapat mendeteksi semua penghuni agar lampu tidak mati saat ruangan terpakai, sementara sensor yang terpapar lorong dapat memicu lampu menyala tanpa alasan.[8] Untuk penjadwalan, FEMP juga menekankan bahwa penghuni perlu tahu cara menimpa (*override*) jadwal dengan mudah.[8]
+**Penempatan sensor menentukan.** Panduan FEMP (terbitan 2000, prinsipnya masih relevan) menyebut sensor kehadiran harus dapat mendeteksi semua penghuni agar lampu tidak mati saat ruangan terpakai, sementara sensor yang terpapar lorong dapat memicu lampu menyala tanpa alasan.[8] Untuk penjadwalan, FEMP juga menekankan bahwa penghuni perlu tahu cara menimpa (*override*) jadwal dengan mudah.[8]
 
 **Keamanan, privasi, dan perawatan** adalah biaya yang terus berjalan: pembaruan perangkat, kata sandi yang unik, dan dukungan produsen. Kami membahasnya di [panduan memilih smart device](/blog/panduan-memilih-smart-device-untuk-rumah-kantor.html).
 

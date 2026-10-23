@@ -14,13 +14,13 @@ Home Assistant adalah perangkat lunak otomasi rumah yang menghubungkan banyak pe
 
 ## Lokal atau cloud: bagian yang sering disalahpahami
 
-Home Assistant mengklasifikasikan integrasi menjadi lokal (*local push*, *local polling*) atau cloud (*cloud push*, *cloud polling*). Integrasi cloud memerlukan internet dan berhenti bekerja bila internet mati atau produsen berhenti mendukung perangkat; integrasi lokal berbicara langsung dengan perangkat, meski perangkatnya harus tetap menyala dan terhubung ke jaringan.[3]
+Menurut tulisan resmi Home Assistant tahun 2016, integrasi diklasifikasikan menjadi lokal (*local push*, *local polling*) atau cloud (*cloud push*, *cloud polling*). Integrasi cloud memerlukan internet dan berhenti bekerja bila internet mati atau produsen berhenti mendukung perangkat; integrasi lokal berbicara langsung dengan perangkat, meski perangkatnya harus tetap menyala dan terhubung ke jaringan.[3]
 
 Artinya, **Home Assistant tidak otomatis membuat perangkat cloud menjadi lokal**. Otomasi yang mengandalkan integrasi cloud tetap terpengaruh gangguan internet. Klaim bahwa sistem "tetap berjalan tanpa internet" hanya benar untuk bagian yang memakai integrasi lokal. Periksa kelas integrasi setiap perangkat sebelum bergantung padanya; kelas tersebut umumnya dicantumkan pada halaman integrasi di dokumentasi Home Assistant.
 
 ## Privasi
 
-Dengan integrasi lokal, data perangkat berada di jaringan Anda. Dengan integrasi cloud, Anda menyerahkan sebagian kendali atas siapa yang dapat mengakses data tersebut.[3] Pilihan lokal tidak otomatis aman: akses jarak jauh, kata sandi, dan pembaruan tetap menjadi tanggung jawab Anda.
+Dengan integrasi lokal, komunikasi antara Home Assistant dan perangkat tidak melewati server produsen. Dengan integrasi cloud, Anda menyerahkan sebagian kendali atas siapa yang dapat mengakses data tersebut.[3] Perangkatnya sendiri mungkin tetap berkomunikasi dengan produsen lewat jalur lain, jadi periksa pengaturan privasi perangkat. Pilihan lokal juga tidak otomatis aman: akses jarak jauh, kata sandi, dan pembaruan tetap menjadi tanggung jawab Anda.
 
 ## Kapan aplikasi bawaan sudah cukup
 

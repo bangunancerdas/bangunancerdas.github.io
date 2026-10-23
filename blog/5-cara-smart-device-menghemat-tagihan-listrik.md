@@ -12,7 +12,7 @@ Dua istilah ini sering tertukar. **Daya** (watt, W) adalah besarnya listrik yang
 
 ## 1. Jadwalkan lampu sesuai jam aktivitas
 
-Panduan FEMP (DOE Amerika Serikat) menyebut penjadwalan waktu sering efektif untuk area kantor terbuka yang luas dengan banyak penghuni, sedangkan sensor kehadiran lebih cocok untuk ruang yang kadang terpakai.[1] Di rumah, contohnya lampu teras yang menyala saat matahari terbenam, pemicu yang memang didukung aturan otomasi Home Assistant.[2]
+Panduan FEMP (DOE Amerika Serikat, terbitan 2000) menyebut penjadwalan waktu sering efektif untuk area kantor terbuka yang luas dengan banyak penghuni, sedangkan sensor kehadiran lebih cocok untuk ruang yang kadang terpakai.[1] Di rumah, contohnya lampu teras yang menyala saat matahari terbenam, pemicu yang memang didukung aturan otomasi Home Assistant.[2]
 
 Syaratnya, jadwal harus sesuai pola pemakaian dan penghuni harus bisa menimpanya dengan mudah, misalnya saat ada yang lembur.[1]
 
